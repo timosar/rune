@@ -194,11 +194,11 @@ bool apply_theme_file(const string& path){
   return true;
 }
 void load_cfg(){
-  vector<string> paths={"nv.json"};
+  vector<string> paths={"rune.json"};
   if(const char* h=getenv("HOME")){
-    paths.push_back(string(h)+"/.nv.json");
-    paths.push_back(string(h)+"/.config/nv.json");
-    paths.push_back(string(h)+"/.config/nv/config.json");
+    paths.push_back(string(h)+"/.rune.json");
+    paths.push_back(string(h)+"/.config/rune.json");
+    paths.push_back(string(h)+"/.config/rune/config.json");
   }
   for(auto& p: paths){
     ifstream f(p);
